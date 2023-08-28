@@ -1,0 +1,17 @@
+/*.swagger-ui .topbar {
+    display: none
+}*/
+
+.swagger-ui .topbar {
+    background-color: rgba(51, 204, 255, 0.25);
+}
+.topbar-wrapper img {
+    height: 70px;
+}
+.swagger-custom-footer {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 20px;
+    margin-top: 24px;
+    background-color: rgba(51, 204, 255, 0.25);
+}
