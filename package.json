@@ -1,0 +1,12 @@
+{
+  "name": "quality-air-api",
+  "version": "1.0.0",
+  "description": "A REST API responsible for exposing the air quality information.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "env-cmd -f ./config/.env node src/index.js",
+    "dev": "env-cmd -f ./config/.env nodemon src/index.js"
+  },
+  "author": "Edem K",
+  "license": "ISC"
+}
