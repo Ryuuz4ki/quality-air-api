@@ -5,14 +5,18 @@
   "main": "src/index.js",
   "scripts": {
     "start": "env-cmd -f ./config/.env node src/index.js",
-    "dev": "env-cmd -f ./config/.env nodemon src/index.js"
+    "dev": "env-cmd -f ./config/.env nodemon src/index.js",
+    "cron": "env-cmd -f ./config/.env node src/utils/cronservice.js"
   },
   "author": "Edem K",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.5.0",
     "cors": "^2.8.5",
+    "cron": "^2.4.3",
     "express": "^4.18.2",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.4.5",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
   }

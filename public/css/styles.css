@@ -1,6 +1,6 @@
-/*.swagger-ui .topbar {
+.swagger-ui .topbar {
     display: none
-}*/
+}
 
 .swagger-ui .topbar {
     background-color: rgba(51, 204, 255, 0.25);

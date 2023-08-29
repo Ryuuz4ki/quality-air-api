@@ -2,8 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+require('./db/mongoose');
 
-const qualityAirRouter = require('./routers/qualityAir');
+const airQualityRouter = require('./routers/airQuality');
 
 
 const PORT = process.env.PORT || 3030 ;
@@ -47,7 +48,7 @@ app.get("/api-docs.json", (req, res) => {
 })
 
 //API Endpoints
-app.use('/airquality', qualityAirRouter);
+app.use('/airquality', airQualityRouter);
 
 
 app.listen(PORT, () => {
