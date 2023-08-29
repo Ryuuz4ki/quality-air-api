@@ -129,7 +129,12 @@ router.get("/infos", async(req, res) => {
 router.get("/paris/mostPollutedDate", async(req, res) => {
     try {
         const airQuality = await AirQuality.findHighQualityScore();
-        res.status(200).send({ message: "The most polluted date at Paris is " + airQuality.measuredAt });
+        if (!airQuality) {
+            res.status(200).send({ message: "No data available for the moment." });
+        }
+        else {
+            res.status(200).send({ message: "The most polluted date at Paris is " + airQuality.measuredAt });
+        }
     }
     catch (e) {
         res.status(400).send({ error: 'An error has occurred. Please try again later.' });
