@@ -90,7 +90,7 @@ router.get("/infos", async(req, res) => {
                 })
         }
         catch (error) {
-            console.log(error);
+            console.log('Error from IQAIR API:', error.code, error.response.status);
             return res.status(400).send({ error: 'An error has occurred. Please try again later.' })
         }
 

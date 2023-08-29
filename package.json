@@ -6,7 +6,8 @@
   "scripts": {
     "start": "env-cmd -f ./config/.env node src/index.js",
     "dev": "env-cmd -f ./config/.env nodemon src/index.js",
-    "cron": "env-cmd -f ./config/.env node src/utils/cronservice.js"
+    "cron": "env-cmd -f ./config/.env node src/utils/cronservice.js",
+    "test": "env-cmd -f ./config/.env mocha tests/airQuality.test.js"
   },
   "author": "Edem K",
   "license": "ISC",
@@ -19,5 +20,11 @@
     "mongoose": "^7.4.5",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0",
+    "nock": "^13.3.3",
+    "supertest": "^6.3.3"
   }
 }
